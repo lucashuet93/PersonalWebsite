@@ -2,12 +2,18 @@ body {
   margin: 0;
   padding: 0;
 }
+.header{
+  padding: .75em;
+}
 
-.block {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px black solid;
-  text-align: center;
-  color:white;
-  background-color: gray;
+.icon{
+  height: 2.5em;
+  width: 2.5em;
+  margin-right: 1em;
+}
+.linkedin{
+  width: 3em;
+}
+.link-text{
+    text-decoration: none;
 }
