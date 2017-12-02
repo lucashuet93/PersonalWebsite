@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/App.css';
 import { Switch, Route } from 'react-router-dom';
 import Blog from './Blog';
 import About from './About';
+import Header from './Header';
 
 class App extends Component {
 	render() {
 		return (
 			<div>
-				Header Comp
+				<Header/>
 				<Switch>
 					<Route exact path='/' component={Blog} />
 					<Route exact path='/about' component={About} />
