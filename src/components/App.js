@@ -8,7 +8,7 @@ import Header from './Header';
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className="ms-Grid">
 				<Header/>
 				<Switch>
 					<Route exact path='/' component={Blog} />
