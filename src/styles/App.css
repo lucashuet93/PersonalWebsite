@@ -2,12 +2,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*
+---------------HEADER----------------
+*/
+
 .header{
   padding: .75em;
   display: flex;
   justify-content: center;
 }
-
+.headerDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .icon{
   height: 2.5em;
   width: 2.5em;
@@ -18,9 +27,4 @@ body {
 }
 .link-text{
   text-decoration: none;
-}
-.headerDiv{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
