@@ -38,3 +38,10 @@ body {
  border: 1px solid #eee;
  padding: .5em;
 }
+.italics{
+  font-style: italic
+}
+.blogPostTitle{
+  text-align: center;
+  padding: 2.5em;
+}

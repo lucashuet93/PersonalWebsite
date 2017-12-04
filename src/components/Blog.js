@@ -7,18 +7,20 @@ class Blog extends Component {
 		super()
 	}
 	generateNotFoundPage() {
-
+		return (
+			<div>
+				<h2> Not Found </h2>
+			</div>
+		)
 	}
 	generateHomePage(blogs) {
 		return (
 			<div>
 				<ul>
-					{
-						blogs.map((blog) => {
-							let endpoint = `/blog/${blog.url}`
-							return <li><NavLink className="link-text" to={endpoint}><span className="ms-font-xl link-text">{blog.title}</span></NavLink></li>
-						})
-					}
+					{blogs.map((blog) => {
+						let endpoint = `/blog/${blog.url}`
+						return <li><NavLink className="link-text" to={endpoint}><span className="ms-font-xl link-text">{blog.title}</span></NavLink></li>
+					})}
 				</ul>
 			</div>
 		)
@@ -33,9 +35,9 @@ class Blog extends Component {
 		let blogs = this.createBlogs();
 		let content;
 		if (this.props.match.params.title) {
-			let found = blogs.find((blog) => blog.url === this.props.match.params.title)
-			if (found) {
-				content = found.content;
+			let selectedBlog = blogs.find((blog) => blog.url === this.props.match.params.title)
+			if (selectedBlog) {
+				content = selectedBlog.content;
 			} else {
 				content = this.generateNotFoundPage();
 			}
@@ -44,11 +46,11 @@ class Blog extends Component {
 		}
 		return (
 			<div className="ms-Grid-row">
-				<div className="ms-Grid-col ms-u-sm1 ms-u-md3" />
-				<div className="ms-Grid-col ms-u-sm10 ms-u-md6">
+				<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+				<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
 					{content}
 				</div>
-				<div className="ms-Grid-col ms-u-sm1 ms-u-md3" />
+				<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 			</div>
 		);
 	}

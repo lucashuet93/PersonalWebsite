@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 class Header extends React.Component {
 	render() {
 		return (
-			<div className="ms-Grid-row ms-bgColor-red ms-fontColor-white header">
+			<div className="ms-Grid-row ms-bgColor-black ms-fontColor-white header">
 				<div className="ms-Grid-col ms-u-sm6 ms-u-md4 ms-font-xxl">LH2</div>
 				<div className="ms-Grid-col ms-u-hiddenSm ms-u-md2" />
 				<div className="ms-Grid-col ms-u-sm3 ms-u-md1 headerDiv">
