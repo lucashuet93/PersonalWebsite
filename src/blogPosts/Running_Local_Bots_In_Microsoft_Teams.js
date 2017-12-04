@@ -31,22 +31,21 @@ class Running_Local_Bots_In_Microsoft_Teams extends Component {
 				
 				<p>The console should log that the server is listening on 3978. If you're running your own bot, note the port you're running on, but it's probably 3978 as well. You're going to need an https endpoint to load your bot into Teams, which means you won't be able to use the http://localhost:3978 endpoint provided by the restify server. Instead, you'll employ the services of ngrok.</p>
 				<p>If you haven't installed ngrok globally before, do so now:</p>
-				<h3>CODE</h3>
 				<p>Ngrok creates secure tunnels to localhost endpoints. Running the http command creates a secure ngrok endpoint that will route requests to your specific localhost port.</p>
 				<p>Provision the tunnel to your local port 3978 (replace with your own port, if necessary):</p>
 				<h3>CODE</h3>
 				<p>You should see logs that look something like:</p>
-				<h3>IMAGE</h3>
+				<img src={require("../images/tunnelLog.jpg")}></img>
 				<p>Note the second forwarding address. Any requests sent to this https endpoint will be forwarded onto your localhost! Go ahead and copy it down. </p>
 
 				<h2>Update Your Bot Framework Settings</h2>
 				<p>Navigate to the <a href="https://docs.microsoft.com/en-us/bot-framework/portal-register-bot">bot framework portal</a> and select the bot you've registered with the Bot Framework. Next, navigate to the <span className="ms-fontWeight-semibold">Settings</span> tab and find the <span className="ms-fontWeight-semibold">Configuration</span> portion of the page. Paste in your ngrok endpoint and add /api/messages to the end. </p>
-				<h3>IMAGE</h3>
+				<img src={require("../images/BFngrokEndpoint.jpg")}></img>
 				<p>Save your changes, and you're all set! You can now communicate with your bot on any supported channel and have the requests handled by your localhost.</p>
 
 				<h2>Chat With Your Bot</h2>
 				<p>It's time to chat with your bot in Teams! On the same <span className="ms-fontWeight-semibold">Configuration</span> portion of the <span className="ms-fontWeight-semibold">Settings</span> page, copy your <span className="ms-fontWeight-semibold">App ID</span>. Open Microsoft Teams (if it was already open, close and re-open) and navigate to the Chat pane. Create a new chat, and paste your App ID on the "To" line.</p>
-				<h3>IMAGE</h3>
+				<img src={require("../images/TeamsChatID.jpg")}></img>
 				<p>Say hello (or anything, really) and the bot will respond with your email! You can now make changes locally and test them inside of Teams. To test your changes, simply make changes to your bot code and re-run your bot locally:</p>
 				<h3>CODE</h3>
 				<p>If you close your ngrok window, simply create a new tunnel and paste the endpoint into your Bot Framework Settings page again.</p>				
