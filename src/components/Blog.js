@@ -4,6 +4,16 @@ class Blog extends Component {
 	constructor(p){
 		super()
 	}
+	generateNotFoundPage(){
+
+	}
+	generateHomePage(blogs){
+		return (
+			<div>
+				
+			</div>
+		)
+	}
 	createBlogs(){
 		let localBotsInTeams = new BlogPost("running-local-bots-in-microsoft-teams", <Running_Local_Bots_In_Microsoft_Teams />);
 		let reactWithActiveDirectory = new BlogPost("react-with-azure-active-directory-integration", <React_With_Azure_Active_Directory_Integration />);
@@ -18,10 +28,10 @@ class Blog extends Component {
 			if(found){
 				content = found.content;
 			} else {
-				content = <div> Not Found </div>
+				content = this.generateNotFoundPage();
 			}
 		} else {
-			content = <div> Home </div>
+			content = this.generateHomePage(blogs);
 		}
 		return (
 			<div className="ms-Grid-row">
