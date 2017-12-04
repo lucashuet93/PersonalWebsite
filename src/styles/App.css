@@ -4,6 +4,8 @@ body {
 }
 .header{
   padding: .75em;
+  display: flex;
+  justify-content: center;
 }
 
 .icon{
@@ -15,5 +17,10 @@ body {
   width: 3em;
 }
 .link-text{
-    text-decoration: none;
+  text-decoration: none;
+}
+.headerDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
