@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Running_Local_Bots_In_Microsoft_Teams extends Component {
 	render() {
 		return (
-			<div className="ms-font-m">
+			<div className="ms-font-m blogPost">
 				<h1>Running Local Bots in Microsoft Teams</h1>
 
 				<p>Bots utilized in a Microsoft Teams application are able to use technologies specific to Teams that extend the functionality of the bot. Leveraging these technologies requires that your bot run inside the Teams ecosystem. Creating a proper development environment inside Microsoft Teams is a fairly simple process.</p>
@@ -28,7 +28,6 @@ class Running_Local_Bots_In_Microsoft_Teams extends Component {
 				<h3>CODE</h3>
 
 				<h2>Create the Tunnel</h2>
-				
 				<p>The console should log that the server is listening on 3978. If you're running your own bot, note the port you're running on, but it's probably 3978 as well. You're going to need an https endpoint to load your bot into Teams, which means you won't be able to use the http://localhost:3978 endpoint provided by the restify server. Instead, you'll employ the services of ngrok.</p>
 				<p>If you haven't installed ngrok globally before, do so now:</p>
 				<p>Ngrok creates secure tunnels to localhost endpoints. Running the http command creates a secure ngrok endpoint that will route requests to your specific localhost port.</p>

@@ -28,3 +28,13 @@ body {
 .link-text{
   text-decoration: none;
 }
+
+/*
+---------------BLOG----------------
+*/
+
+.blogPost img{
+ max-width: 95%;
+ border: 1px solid #eee;
+ padding: .5em;
+}

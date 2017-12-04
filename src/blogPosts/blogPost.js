@@ -1,6 +1,7 @@
 export class BlogPost {
-	constructor(url, content){
+	constructor(url, title, content){
 		this.url = url;
+		this.title = title;
 		this.content = content;
 	}
 }
