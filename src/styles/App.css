@@ -78,3 +78,41 @@ body {
  margin-top: 2em;
  margin-bottom: 1em;
 }
+
+.tag {
+  display: inline-block;
+  vertical-align: bottom;
+  color: black;
+  background-color: #eee;
+  padding: .5em;
+  margin: .25em;
+}
+.tagText{
+    margin: .25em;
+}
+.blogListItem{
+  border-top: 1px solid #eee;  
+  border-right: 1px solid #eee;  
+  border-left: 1px solid #eee;  
+  padding: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blogListItem:hover{
+  background-color: #eee;
+}
+.blogList{
+  border-bottom: 1px solid #eee;    
+}
+.chevronDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid #eee;
+}
+.blogListItemHeader{
+  padding: 1em;
+  text-align: center;
+}
