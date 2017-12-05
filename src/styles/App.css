@@ -39,9 +39,25 @@ body {
  padding: .5em;
 }
 .italics{
-  font-style: italic
+  font-style: italic;
 }
 .blogPostTitle{
   text-align: center;
+  border-bottom: 1px solid #eee;
   padding: 2.5em;
+}
+.blogPostUpdatedDate img{
+  height: 2.5em;
+  width: 2.5em;
+  margin-right: .25em;
+  border-radius: 50%;
+  padding: 0;
+}
+.blogPostUpdatedDate * {
+  font-style: italic;
+  display: inline-block;
+  vertical-align: middle;
+}
+.blogPostUpdatedDate {
+  margin: 1em;
 }

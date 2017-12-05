@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
+import BlogPostTitle from '../components/BlogPostTitle';
 
 class Running_Local_Bots_In_Microsoft_Teams extends Component {
 	render() {
@@ -44,16 +45,14 @@ bot.dialog('/', [
 		const codeString6 = `ngrok http 3978`;
 		return (
 			<div className="ms-font-m ms-fontWeight-semilight blogPost">
-				<div className="blogPostTitle">
-					<span className="ms-font-su">Running Local Bots in Microsoft Teams</span>
-				</div>
+				<BlogPostTitle title="Running Local Bots in Microsoft Teams" updatedDate="November 29, 2017"/>
 
 				<p>Bots utilized in a Microsoft Teams application are able to use technologies specific to Teams that extend the functionality of the bot.
 					Leveraging and successfully testing these technologies, however, requires that your bot run inside the Teams ecosystem.
 					Creating a proper development environment inside Microsoft Teams is a fairly simple process. You'll need to: </p>
 				<ol>
 					<li>Run your bot locally</li>
-					<li>Create an ngrok tunnel to the localhost port your is running on</li>
+					<li>Create an ngrok tunnel to the localhost port your bot is running on</li>
 					<li>Update your registered bot's messaging endpoint to your ngrok tunnel endpoint</li>
 				</ol>
 				<p>If you haven't registered a bot with the Bot Framework yet, use <a href="https://docs.microsoft.com/en-us/bot-framework/portal-register-bot">this guide</a> to register one now.</p>
