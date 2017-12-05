@@ -99,6 +99,7 @@ componentWillMount() {
 					Does that mean you can't use it in other SPA frameworks? Of course not!
 					Let's create a class that can be utilized in a variety of SPA frameworks, with a specific implementation into React.js. </p>
 
+				<div className="spacer"></div>
 				<span className="ms-font-xxl">Create Your React Project</span>
 				<p>If you haven't installed create-react-app globally before, do so now:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString1}</SyntaxHighlighter>
@@ -107,6 +108,7 @@ componentWillMount() {
 				<p>Once create-react-app is finished provisioning your project, open the folder and run it:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString3}</SyntaxHighlighter>
 
+				<div className="spacer"></div>
 				<span className="ms-font-xxl">Create an Active Directory v2 App</span>
 				<p>You'll need to spin up a new Active Directory v2 application you can leverage in your SPA.
 					Navigate to the new <a href="https://apps.dev.microsoft.com">Microsoft Application Registration Portal</a>, find the <span className="ms-fontWeight-semibold">Converged Applications</span> section, and click <span className="ms-fontWeight-semibold">Add an app</span>.</p>
@@ -122,6 +124,7 @@ componentWillMount() {
 				<img src={require("../images/PlatformsWithRedirect.jpg")}></img>
 				<p>One last thing before you're all set. Navigate to the <span className="ms-fontWeight-semibold">Properties</span> section at the top of the page, and copy down your <span className="ms-fontWeight-semibold">Application Id</span>.</p>
 
+				<div className="spacer"></div>
 				<span className="ms-font-xxl">Create a Reusable AzureADHelper class</span>
 				<p>In your React project, you'll create a helper class with 3 methods that login, logout, and read the current user information. The AADv2 Application you just created will handle these requests.</p>
 				<p>Go ahead and install the adal.js package into your project:</p>
@@ -132,6 +135,7 @@ componentWillMount() {
 				<p>The bind method allows you to use the class methods in any component without confusing the meaning of <span className="ms-fontWeight-semibold">this</span>. You may not require the bind calls in other SPA frameworks.</p>
 				<p>You can now instantiate the azureADHelper class in any React.js component (or other SPA framework) and run authentication methods! Pretty simple, right?</p>
 
+				<div className="spacer"></div>
 				<span className="ms-font-xxl">Use the AzureADHelper class in the React Project</span>
 				<p>Navigate to app.js and utilize your helper class:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString6}</SyntaxHighlighter>

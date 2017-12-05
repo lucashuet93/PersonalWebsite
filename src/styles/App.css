@@ -61,3 +61,8 @@ body {
 .blogPostUpdatedDate {
   margin: 1em;
 }
+.spacer{
+ border-top: 1px solid #eee;
+ margin-top: 2em;
+ margin-bottom: 1em;
+}
