@@ -53,7 +53,7 @@ bot.dialog('/', [
 				<ol>
 					<li>Run your bot locally</li>
 					<li>Create an ngrok tunnel to the localhost port your bot is running on</li>
-					<li>Update your registered bot's messaging endpoint to your ngrok tunnel endpoint</li>
+					<li>Update your registered bot's messaging endpoint to match your ngrok tunnel endpoint</li>
 				</ol>
 				<p>If you haven't registered a bot with the Bot Framework yet, use <a href="https://docs.microsoft.com/en-us/bot-framework/portal-register-bot">this guide</a> to register one now.</p>
 
@@ -84,7 +84,7 @@ bot.dialog('/', [
 
 				<div className="spacer"></div>
 				<span className="ms-font-xxl">Update Your Bot Framework Settings</span>
-				<p>Navigate to the <a href="https://docs.microsoft.com/en-us/bot-framework/portal-register-bot">bot framework portal</a> and select the bot you've registered with the Bot Framework. Next, navigate to the <span className="ms-fontWeight-semibold">Settings</span> tab and find the <span className="ms-fontWeight-semibold">Configuration</span> portion of the page. Paste in your ngrok endpoint and add /api/messages to the end. </p>
+				<p>Navigate to the <a href="https://dev.botframework.com/bots">bot framework portal</a> and select the bot you've registered. Next, navigate to the <span className="ms-fontWeight-semibold">Settings</span> tab and find the <span className="ms-fontWeight-semibold">Configuration</span> portion of the page. Paste in your ngrok endpoint and add /api/messages to the end. </p>
 				<img src={require("../images/BFngrokEndpoint.jpg")}></img>
 				<p>Save your changes, and you're all set! You can now communicate with your bot on any supported channel and have the requests handled by your localhost.</p>
 
@@ -94,7 +94,7 @@ bot.dialog('/', [
 				<img src={require("../images/TeamsChatID.jpg")}></img>
 				<p>Say hello (or anything, really) and the bot will respond with your email! You can now make changes locally and test them inside of Teams. To test your changes, simply make changes to your bot code and re-run your bot locally:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString4}</SyntaxHighlighter>
-				<p>If you close your ngrok window, simply create a new tunnel and paste the endpoint into your Bot Framework Settings page again.</p>
+				<p>If you close your ngrok window, you'll need to create a new tunnel and paste the endpoint into your Bot Framework Settings page again.</p>
 			</div>
 		);
 	}
