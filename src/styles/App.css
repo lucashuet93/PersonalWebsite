@@ -21,8 +21,6 @@ body {
   height: 2.5em;
   width: 2.5em;
   margin-right: 1em;
-  display: inline-block;
-  vertical-align: middle;
 }
 .linkedin{
   width: 2.25em;
@@ -33,6 +31,14 @@ body {
 }
 .iconDiv{
   text-align: center;
+}
+.iconDiv *{
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer{
+  padding-top: .25em;
 }
 
 /*
