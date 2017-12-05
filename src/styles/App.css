@@ -7,7 +7,7 @@ body {
 ---------------HEADER----------------
 */
 
-.header{
+.header, .footer{
   padding: .75em;
   display: flex;
   justify-content: center;
@@ -21,12 +21,18 @@ body {
   height: 2.5em;
   width: 2.5em;
   margin-right: 1em;
+  display: inline-block;
+  vertical-align: middle;
 }
 .linkedin{
-  width: 3em;
+  width: 2.25em;
+  height: 2.25em;
 }
 .link-text{
   text-decoration: none;
+}
+.iconDiv{
+  text-align: center;
 }
 
 /*

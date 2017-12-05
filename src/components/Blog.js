@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration } from '../blogPosts';
+import BlogFooter from './BlogFooter';
 
 class Blog extends Component {
 	constructor(p) {
@@ -9,21 +10,33 @@ class Blog extends Component {
 	generateNotFoundPage() {
 		return (
 			<div>
-				<h2> Not Found </h2>
+				<div className="ms-Grid-row">
+					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+					<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
+						<p style={{ textAlign: "center" }}>Not Found</p>
+					</div>
+					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+				</div>
 			</div>
 		)
 	}
 	generateHomePage(blogs) {
 		return (
 			<div>
-				<ul>
-					{blogs.map((blog) => {
-						let endpoint = `/blog/${blog.url}`
-						return <li><NavLink className="link-text" to={endpoint}><span className="ms-font-xl link-text">{blog.title}</span></NavLink></li>
-					})}
-				</ul>
+				<div className="ms-Grid-row">
+					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+					<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
+						<ul>
+							{blogs.map((blog) => {
+								let endpoint = `/blog/${blog.url}`
+								return <li><NavLink className="link-text" to={endpoint}><span className="ms-font-xl link-text">{blog.title}</span></NavLink></li>
+							})}
+						</ul>
+					</div>
+					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+				</div>
 			</div>
-		)
+		);
 	}
 	createBlogs() {
 		let localBotsInTeams = new BlogPost("running-local-bots-in-microsoft-teams", "Running Local Bots in Microsoft Teams", <Running_Local_Bots_In_Microsoft_Teams />);
@@ -37,22 +50,25 @@ class Blog extends Component {
 		if (this.props.match.params.title) {
 			let selectedBlog = blogs.find((blog) => blog.url === this.props.match.params.title)
 			if (selectedBlog) {
-				content = selectedBlog.content;
+				return (
+					<div>
+						<div className="ms-Grid-row">
+							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+							<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
+								{selectedBlog.content}
+							</div>
+							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
+						</div>
+						<div className="spacer"></div>
+						<BlogFooter />
+					</div>
+				)
 			} else {
-				content = this.generateNotFoundPage();
+				return this.generateNotFoundPage();
 			}
 		} else {
-			content = this.generateHomePage(blogs);
+			return this.generateHomePage(blogs);
 		}
-		return (
-			<div className="ms-Grid-row">
-				<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
-				<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
-					{content}
-				</div>
-				<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
-			</div>
-		);
 	}
 }
 
