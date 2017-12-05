@@ -11,7 +11,7 @@ class Blog extends Component {
 	renderListItem(blog) {
 		let endpoint = `/blog/${blog.url}`
 		return (
-			<div className="ms-Grid-row blogListItem" data-is-focusable={true}>
+			<div className="ms-Grid-row blogListItem">
 				<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
 					<NavLink className="link-text" to={endpoint}><span className="ms-font-l ms-font-themePrimary link-text">{blog.title}</span></NavLink>
 				</div>
@@ -47,21 +47,10 @@ class Blog extends Component {
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 					<div className="ms-Grid-col ms-u-sm10 ms-u-md8 blogList">
-						<div className="ms-Grid-row blogListItemHeader">
-							<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
-								<span className="ms-font-xl ms-font-themePrimary link-text">Title</span>
-							</div>
-							<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
-								<span className="ms-font-xl ms-font-themePrimary link-text">Tags</span>
-							</div>
-							<div className="ms-Grid-col ms-u-sm1 ms-u-md1" />
-						</div>
-						<FocusZone direction={FocusZoneDirection.vertical}>
-							<List
-								items={blogs}
-								onRenderCell={this.renderListItem.bind(this)}
-							/>
-						</FocusZone>
+						<List
+							items={blogs}
+							onRenderCell={this.renderListItem.bind(this)}
+						/>
 					</div>
 					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 				</div>
