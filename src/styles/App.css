@@ -120,3 +120,12 @@ body {
   padding: 1em;
   text-align: center;
 }
+.me {
+ max-width: 40%;
+ border: 1px solid #eee;
+ padding: .5em;
+  margin-left: 1em;
+}
+.aboutDiv{
+  margin-top: 3em;
+}
