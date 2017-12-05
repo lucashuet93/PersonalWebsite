@@ -29,6 +29,9 @@ body {
 .link-text{
   text-decoration: none;
 }
+.link-text:visited{
+  color: #106ebe;
+}
 .iconDiv{
   text-align: center;
 }

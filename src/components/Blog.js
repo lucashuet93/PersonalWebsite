@@ -11,21 +11,25 @@ class Blog extends Component {
 	renderListItem(blog) {
 		let endpoint = `/blog/${blog.url}`
 		return (
-			<div className="ms-Grid-row blogListItem">
-				<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
-					<NavLink className="link-text" to={endpoint}><span className="ms-font-l ms-font-themePrimary link-text">{blog.title}</span></NavLink>
+			<NavLink className="link-text" to={endpoint}>
+				<div className="ms-Grid-row blogListItem">
+					<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
+						<span className="ms-font-l link-text">{blog.title}</span>
+					</div>
+					<div className="ms-Grid-col ms-u-sm6 ms-u-md6">
+						{blog.tags.map((tag) => {
+							return (
+								<div className='tag'>
+									<span className="ms-font-m tagText ms-fontWeight-regular">{tag}</span>
+								</div>
+							)
+						})}
+					</div>
+					<div className="ms-Grid-col ms-u-sm1 ms-u-md1">
+						<i class="ms-Icon ms-Icon--ChevronRight" aria-hidden="true"></i>
+					</div>
 				</div>
-				<div className="ms-Grid-col ms-u-sm6 ms-u-md6">
-					{blog.tags.map((tag) => {
-						return (
-							<div className='tag'>
-								<span className="ms-font-m tagText ms-fontWeight-regular">{tag}</span>
-							</div>
-						)
-					})}
-				</div>
-				<div className="ms-Grid-col ms-u-sm1 ms-u-md1"><i class="ms-Icon ms-Icon--ChevronRight" aria-hidden="true"></i></div>
-			</div>
+			</NavLink>
 		)
 	}
 	generateNotFoundPage() {
