@@ -16,9 +16,22 @@ class About extends Component {
 							</div>
 						</div>
 						<div className="ms-Grid-row">
-							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight">
+							<div className="ms-Grid-col ms-u-sm12 ms-u-hiddenMdUp ms-font-m ms-fontWeight-semilight">
 								<span className="ms-font-xxl">How Did I Get Here?</span>
-								<img className="me" src={require("../images/lucashh.jpg")} align="right"></img>
+								<img className="me-mobile me" src={require("../images/lucashh.jpg")} align="right"></img>
+								<p>
+									Well, I graduated from the University of North Carolina in 2015 as a double major in Economics and Philosophy…. and used none of it. Shortly after graduation, in my quest for the perfect role, I decided it would behoove me to learn a bit about coding. After all, I was moving to Seattle, right?
+								</p>
+								<p>
+									I hopped on codecademy, started learning about this “JavaScript” thing, and the rest was history. I had been introduced to the world of coding and instantly fallen in love.
+								</p>
+								<p>
+									Armed with an obsessive personality (to put it lightly) and a fervent desire to possess the power to build <span className="italics">anything</span> I dreamed up, I began to live and breathe code. By mid-2016, I had begun working as a contractor at Microsoft, and then started work as a full time SDE in Commercial Software Engineering that November. Today, I help some of Microsoft’s largest partners build complex solutions using the services and platform provided by Azure.
+								</p>
+							</div>
+							<div className="ms-Grid-col ms-u-hiddenSm ms-u-md12 ms-font-m ms-fontWeight-semilight howDid-web">
+								<span className="ms-font-xxl">How Did I Get Here?</span>
+								<img className="me me-web" src={require("../images/lucashh.jpg")} align="right"></img>
 								<p>
 									Well, I graduated from the University of North Carolina in 2015 as a double major in Economics and Philosophy…. and used none of it. Shortly after graduation, in my quest for the perfect role, I decided it would behoove me to learn a bit about coding. After all, I was moving to Seattle, right?
 								</p>

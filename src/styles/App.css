@@ -141,11 +141,17 @@ body {
   text-align: center;
 }
 .me {
-  max-width: 40%;
   border: 1px solid #eee;
   padding: .25em;
   margin-left: 1em;
   margin-top: 1em;
+}
+.me-mobile {
+  max-width: 40%;
+}
+.me-web {
+  max-width: 25%;
+  margin-top:3em;
 }
 .aboutDiv{
   margin-top: 3em;
@@ -158,4 +164,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+}
+.howDid-web{
+  margin-top: 2em
 }
