@@ -13,7 +13,7 @@ class Blog extends Component {
 			<NavLink className="link-text" to={endpoint}>
 				<div className="ms-Grid-row blogListItem">
 					<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
-						<span className="ms-font-l link-text">{blog.title}</span>
+						<span className="ms-font-l blogItemLink">{blog.title}</span>
 					</div>
 					<div className="ms-Grid-col ms-u-sm6 ms-u-md6">
 						{blog.tags.map((tag) => {

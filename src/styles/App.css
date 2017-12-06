@@ -44,7 +44,8 @@ body {
 .link-text{
   text-decoration: none;
 }
-.link-text:visited{
+.blogItemLink{
+  text-decoration: none;
   color: #106ebe;
 }
 .iconDiv{
@@ -140,10 +141,11 @@ body {
   text-align: center;
 }
 .me {
- max-width: 40%;
- border: 1px solid #eee;
- padding: .5em;
+  max-width: 40%;
+  border: 1px solid #eee;
+  padding: .25em;
   margin-left: 1em;
+  margin-top: 1em;
 }
 .aboutDiv{
   margin-top: 3em;
