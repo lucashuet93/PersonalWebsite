@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import Blog from './Blog';
 import About from './About';
 import Header from './Header';
+import Footer from './Footer';
+
 
 class App extends Component {
 	render() {
@@ -15,6 +17,7 @@ class App extends Component {
 					<Route exact path='/about' component={About} />
 					<Route path='/blog/:title?' component={Blog} />
 				</Switch>
+				<Footer />
 			</div>
 		);
 	}

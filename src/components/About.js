@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BlogFooter from './BlogFooter';
 
 class About extends Component {
 	render() {
@@ -21,8 +20,6 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 					</div>
 					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 				</div>
-				<div className="spacer"></div>
-				<BlogFooter />
 			</div>
 		);
 	}

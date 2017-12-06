@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const BlogPostFooter = (props) => {
+const Footer = (props) => {
 	return (
 		<div className="ms-Grid-row footer">
 			<div className="ms-Grid-col ms-u-sm2 ms-u-md2">
@@ -16,4 +16,4 @@ const BlogPostFooter = (props) => {
 	)
 }
 
-export default BlogPostFooter;
+export default Footer;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration } from '../blogPosts';
-import BlogFooter from './BlogFooter';
 import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
 
 class Blog extends Component {
@@ -83,8 +82,6 @@ class Blog extends Component {
 							</div>
 							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 						</div>
-						<div className="spacer"></div>
-						<BlogFooter />
 					</div>
 				)
 			} else {
