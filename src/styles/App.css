@@ -148,3 +148,12 @@ body {
 .aboutDiv{
   margin-top: 3em;
 }
+.letter{
+  border: 1px solid white;
+  display: flex;
+  width: 1.5em;
+  height: 1.5em;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
