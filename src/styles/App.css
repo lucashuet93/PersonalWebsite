@@ -177,6 +177,9 @@ body {
   padding: .75em;
   width: 16.6666%;
 }
+.aboutListItemMobile{
+  width: 33.333%;
+}
 .aboutListItemCont{
   display: flex;
   justify-content: center;
@@ -189,4 +192,7 @@ body {
 }
 .aboutLastListItem{
   border-right: 1px solid #eee;
+}
+.mobileList{
+  margin-bottom: 2em;
 }
