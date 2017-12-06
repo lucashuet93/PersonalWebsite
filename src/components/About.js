@@ -4,8 +4,9 @@ import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-reac
 
 class About extends Component {
 	renderListItem(item) {
+		let itemClass = item.last ? "aboutListItem aboutLastListItem" : "aboutListItem";
 		return (
-			<div className="aboutListItem">
+			<div className={itemClass}>
 				<div className="aboutListItemCont">
 					<span className="ms-font-l aboutListTitle">{item.title}</span>
 				</div>
@@ -19,27 +20,28 @@ class About extends Component {
 		let items = [
 			{
 				title:"Node.js",
-				image: "twitterBlack.png"
+				image: "node.jpg"
 			},
 			{
 				title:".NET",
-				image: "twitterBlack.png"
+				image: "dotnet.jpg"
 			},
 			{
 				title:"React.js",
-				image: "twitterBlack.png"
+				image: "react.png"
 			},
 			{
 				title:"Bots",
-				image: "twitterBlack.png"
+				image: "bot.png"
 			},
 			{
 				title:"Serverless",
-				image: "twitterBlack.png"
+				image: "serverless.png"
 			},
 			{
 				title:"Teams",
-				image: "twitterBlack.png"
+				image: "Teams.png",
+				last: true
 			},
 		];
 		return (
@@ -56,7 +58,7 @@ class About extends Component {
 							</div>
 						</div>
 						<div className="ms-Grid-row ">
-							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight aboutList">
+							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight">
 								{items.map((item) => {
 									return this.renderListItem(item);
 								})}
