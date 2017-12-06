@@ -168,3 +168,25 @@ body {
 .howDid-web{
   margin-top: 2em
 }
+.aboutList{
+  border-right: 1px solid #eee;
+}
+.aboutListItem{
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: inline-block;
+  vertical-align: top;
+  padding: .75em;
+  width: 16.6666%;
+}
+.aboutListItemCont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutListImage{
+  margin-top: .5em;
+  width: 2.5em;
+  height: 2.5em;
+}

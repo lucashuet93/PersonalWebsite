@@ -1,7 +1,47 @@
 import React, { Component } from 'react';
+import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
+
 
 class About extends Component {
+	renderListItem(item) {
+		return (
+			<div className="aboutListItem">
+				<div className="aboutListItemCont">
+					<span className="ms-font-l aboutListTitle">{item.title}</span>
+				</div>
+				<div className="aboutListItemCont">
+					<img className="aboutListImage" src={require(`../images/${item.image}`)}></img>
+				</div>
+			</div>
+		)
+	}
 	render() {
+		let items = [
+			{
+				title:"Node.js",
+				image: "twitterBlack.png"
+			},
+			{
+				title:".NET",
+				image: "twitterBlack.png"
+			},
+			{
+				title:"React.js",
+				image: "twitterBlack.png"
+			},
+			{
+				title:"Bots",
+				image: "twitterBlack.png"
+			},
+			{
+				title:"Serverless",
+				image: "twitterBlack.png"
+			},
+			{
+				title:"Teams",
+				image: "twitterBlack.png"
+			},
+		];
 		return (
 			<div>
 				<div className="ms-Grid-row">
@@ -11,8 +51,15 @@ class About extends Component {
 							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight">
 								<span className="ms-font-xxl">Who Am I?</span>
 								<p>
-									I’m a Node.js and .NET developer in Microsoft’s Commercial Software Engineering department, helping our largest partners build complex solutions using the services and platform provided by Azure. I’m primarily focused on intricate UIs, intelligent bots, and serverless technologies, but my interests and skills are ever-evolving in the face of constant technological change. 
+									I’m a Node.js and .NET developer in Microsoft’s Commercial Software Engineering department, helping our largest partners build complex solutions using the services and platform provided by Azure. I’m primarily focused on intricate UIs, intelligent bots, and serverless technologies, but my interests and skills are ever-evolving in the face of constant technological change.
 								</p>
+							</div>
+						</div>
+						<div className="ms-Grid-row ">
+							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight aboutList">
+								{items.map((item) => {
+									return this.renderListItem(item);
+								})}
 							</div>
 						</div>
 						<div className="ms-Grid-row">
