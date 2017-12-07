@@ -6,15 +6,10 @@ class About extends Component {
 	howDidIGetHere() {
 		return (
 			<div>
-				<p>
-					I graduated from the University of North Carolina in 2015 as a double major in Economics and Philosophy…. and used none of it. Shortly after graduation, in my quest for the perfect role, I decided it would behoove me to learn a bit about coding. After all, I was moving to Seattle, right?
-				</p>
-				<p>
-					I hopped on codecademy, started learning about this “JavaScript” thing, and the rest was history. I had been introduced to the world of coding and instantly fallen in love.
-				</p>
-				<p>
-					Armed with an obsessive personality (to put it lightly) and a fervent desire to possess the power to build <span className="italics">anything</span> I dreamed up, I began to live and breathe code. By mid-2016, I had begun working as a contractor at Microsoft, and then started work as a full time SDE in Commercial Software Engineering that November.
-				</p>
+				<p>I graduated from the University of North Carolina in 2015 as a double major in Economics and Philosophy…. and used none of it. Shortly after graduation, in my quest for the perfect role, I decided it would behoove me to learn a little bit about coding. After all, I was moving to Seattle, right?</p>
+				<p>I hopped on codecademy.com, started learning about this “JavaScript” thing, and the rest was history. I had been introduced to the world of coding and instantly fallen in love.</p>
+				<p>Armed with an obsessive personality (to put it lightly) and a fervent desire to possess the power to build <span className="italics">anything</span> I dreamed up, I began to live and breathe code. By mid-2016, I had begun working as a contractor at Microsoft, and then started work as a full time SDE in Commercial Software Engineering that November. </p>
+				<p>I believe the most important indicator of success is passion. Tremendous passion enables you to overcome any barriers preventing you from achieving ambitious goals. I attribute my successful transition into software engineering to one simple fact: I am completely and utterly enamored with code. </p>
 			</div>
 		)
 	}
