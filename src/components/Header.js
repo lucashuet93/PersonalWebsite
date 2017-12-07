@@ -10,8 +10,8 @@ class Header extends React.Component {
 					<div style={{ verticalAlign: "top", display: "inline-block" }}><span className="letter">H</span></div>
 					<div style={{ verticalAlign: "top", display: "inline-block" }}><span className="letter">H</span></div>
 				</div>
-				<div className="ms-Grid-col ms-u-hiddenSm ms-u-md6" />
-				<div className="ms-Grid-col ms-u-sm3 ms-u-md1 headerDiv">
+				<div className="ms-Grid-col ms-u-sm1 ms-u-md6" />
+				<div className="ms-Grid-col ms-u-sm2 ms-u-md1 headerDiv">
 					<NavLink className="link-text" to="/blog"><span className="ms-font-m ms-fontWeight-light ms-fontColor-white link-text">BLOG</span></NavLink>
 				</div>
 				<div className="ms-Grid-col ms-u-sm3 ms-u-md1 headerDiv">
