@@ -22,9 +22,7 @@ class About extends Component {
 						<div className="ms-Grid-row aboutDiv">
 							<div className="ms-Grid-col ms-u-sm12 ms-u-md12 ms-font-m ms-fontWeight-semilight">
 								<span className="ms-font-xxl">Who Am I?</span>
-								<p>
-									I’m a Node.js and .NET developer in Microsoft’s Commercial Software Engineering department, helping our largest partners build complex solutions using the services and platform provided by Azure. I’m primarily focused on intricate UIs, intelligent bots, and serverless technologies, but my interests and skills are ever-evolving in the face of constant technological change.
-								</p>
+								<p>I’m a Node.js and .NET developer in Microsoft’s Commercial Software Engineering department, helping our largest partners build complex solutions using the services and platform provided by Azure. I’m primarily focused on intricate UIs, intelligent bots, and serverless technologies, but my interests and skills are ever-evolving in the face of constant technological change.</p>
 							</div>
 						</div>
 						<TechnologyFocuses />
