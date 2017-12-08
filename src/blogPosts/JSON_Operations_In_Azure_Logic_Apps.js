@@ -14,7 +14,7 @@ class JSON_Operations_In_Azure_Logic_Apps extends Component {
     }
 `;
 		const codeString2 = `@{json(INPUT_TO_CONVERT).PROPERTY_NAME}`;
-		const codeString3 = `@{json(triggerBody()[‘MessageText’]).PROPERTY_NAME}`;
+		const codeString3 = `@{json(triggerBody()['MessageText']).PROPERTY_NAME}`;
 		return (
 			<div className="ms-font-m ms-fontWeight-semilight blogPost">
 
@@ -54,7 +54,7 @@ class JSON_Operations_In_Azure_Logic_Apps extends Component {
 				<p>Posting a message to the email queue will trigger the same email as the HTTP Request triggered Logic App!</p>
 
 				<BlogPostSubHeader subHeader="Logic App Designer - Parse JSON Data Operation" />
-				<p>The same functionality can be implemented from the Logic App Designer by creating a new <span className="ms-fontWeight-semibold">Data Operations – Parse JSON</span> action to the workflow. Immediately following the Azure Queue trigger (or any step that creates a JSON object of unknown structure), search for “JSON” and add the action.</p>
+				<p>The same functionality can be implemented from the Logic App Designer by creating a new <span className="ms-fontWeight-semibold">Data Operations – Parse JSON</span> action to the workflow. Immediately following the Azure Queue trigger (or any step that creates a JSON object of unknown structure), search for "json" and add the action.</p>
 				<img src={require("../images/SearchDataOperationsJSON.jpg")}></img>
 				<p>The structure of Message Text is currently unknown to the Logic App, but a Parse JSON action is capable of producing a strongly typed schema definition, much like the HTTP Request trigger. The object’s properties must be specified explicitly, achieved by placing Message Text in the <span className="ms-fontWeight-semibold">Content</span> field, then clicking <span className="ms-fontWeight-semibold">Use sample payload to generate schema</span>, and providing the following payload:</p>
 				<img src={require("../images/ExampleJSONPayloadParseJSON.jpg")}></img>
