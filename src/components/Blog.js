@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
-import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration } from '../blogPosts';
+import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration, JSON_Operations_In_Azure_Logic_Apps } from '../blogPosts';
 import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
 
 class Blog extends Component {
@@ -61,10 +61,10 @@ class Blog extends Component {
 		);
 	}
 	createBlogs() {
-
 		let localBotsInTeams = new BlogPost("running-local-bots-in-microsoft-teams", "Running Local Bots in Microsoft Teams", <Running_Local_Bots_In_Microsoft_Teams />, ["Microsoft Teams", "Bots"]);
-		let reactWithActiveDirectory = new BlogPost("react-with-azure-active-directory-integration", "React With Azure Active Directory Integration", <React_With_Azure_Active_Directory_Integration />, ["React.js", "Active Directory"]);
-		let blogPosts = [localBotsInTeams, reactWithActiveDirectory];
+		let reactWithActiveDirectory = new BlogPost("react-with-azure-active-directory-integration", "Integrate Azure Active Directory into React.js using ADAL.js", <React_With_Azure_Active_Directory_Integration />, ["React.js", "Active Directory"]);
+		let jsonInLogicApps = new BlogPost("json-operations-in-azure-logic-apps", "JSON Operations in Azure Logic Apps", <JSON_Operations_In_Azure_Logic_Apps />, ["Logic Apps"]);
+		let blogPosts = [localBotsInTeams, reactWithActiveDirectory, jsonInLogicApps];
 		return blogPosts;
 	}
 	render() {
