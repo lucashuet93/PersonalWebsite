@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
-import BlogPostTitle from '../components/BlogPostTitle';
 import BlogPostSubHeader from '../components/BlogPostSubHeader';
 
 class React_With_Azure_Active_Directory_Integration extends Component {
@@ -94,7 +93,6 @@ componentWillMount() {
 }`;
 		return (
 			<div className="ms-font-m ms-fontWeight-semilight blogPost">
-				<BlogPostTitle title="Integrate Azure Active Directory into React.js using ADAL.js" updatedDate="December 4, 2017"/>
 
 				<p>Adal.js allows developers to utilize Azure Active Directory for authentication in single-page apps, but the docs state the "library is optimized for working together with AngularJS".
 					Does that mean you can't use it in other SPA frameworks? Of course not!

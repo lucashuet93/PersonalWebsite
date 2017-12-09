@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration, JSON_Operations_In_Azure_Logic_Apps } from '../blogPosts';
 import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
+import BlogPostTitle from '../components/BlogPostTitle';
 
 class Blog extends Component {
 	constructor(p) {
@@ -61,9 +62,9 @@ class Blog extends Component {
 		);
 	}
 	createBlogs() {
-		let localBotsInTeams = new BlogPost("running-local-bots-in-microsoft-teams", "Running Local Bots in Microsoft Teams", <Running_Local_Bots_In_Microsoft_Teams />, ["Microsoft Teams", "Bots"]);
-		let reactWithActiveDirectory = new BlogPost("react-with-azure-active-directory-integration", "Integrate Azure Active Directory into React.js using ADAL.js", <React_With_Azure_Active_Directory_Integration />, ["React.js", "Active Directory"]);
-		let jsonInLogicApps = new BlogPost("json-operations-in-azure-logic-apps", "JSON Operations in Azure Logic Apps", <JSON_Operations_In_Azure_Logic_Apps />, ["Logic Apps"]);
+		let localBotsInTeams = new BlogPost("running-local-bots-in-microsoft-teams", "Running Local Bots in Microsoft Teams", <Running_Local_Bots_In_Microsoft_Teams />, ["Microsoft Teams", "Bots"], "November 29, 2017");
+		let reactWithActiveDirectory = new BlogPost("react-with-azure-active-directory-integration", "Integrate Azure Active Directory into React.js using ADAL.js", <React_With_Azure_Active_Directory_Integration />, ["React.js", "Active Directory"], "December 4, 2017");
+		let jsonInLogicApps = new BlogPost("json-operations-in-azure-logic-apps", "JSON Operations in Azure Logic Apps", <JSON_Operations_In_Azure_Logic_Apps />, ["Logic Apps"], "December 8, 2017");
 		let blogPosts = [localBotsInTeams, reactWithActiveDirectory, jsonInLogicApps];
 		return blogPosts;
 	}
@@ -78,6 +79,7 @@ class Blog extends Component {
 						<div className="ms-Grid-row">
 							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 							<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
+								<BlogPostTitle title={selectedBlog.title} updatedDate={selectedBlog.updatedDate} />
 								{selectedBlog.content}
 							</div>
 							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />

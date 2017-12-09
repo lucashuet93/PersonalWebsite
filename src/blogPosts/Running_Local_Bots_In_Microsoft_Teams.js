@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
-import BlogPostTitle from '../components/BlogPostTitle';
 import BlogPostSubHeader from '../components/BlogPostSubHeader';
 
 class Running_Local_Bots_In_Microsoft_Teams extends Component {
@@ -46,7 +45,6 @@ bot.dialog('/', [
 		const codeString6 = `ngrok http 3978`;
 		return (
 			<div className="ms-font-m ms-fontWeight-semilight blogPost">
-				<BlogPostTitle title="Running Local Bots in Microsoft Teams" updatedDate="November 29, 2017" />
 
 				<p>Bots utilized in a Microsoft Teams application are able to use technologies specific to Teams that extend the functionality of the bot.
 					Leveraging and successfully testing these technologies, however, requires that your bot run inside the Teams ecosystem.

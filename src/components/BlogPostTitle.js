@@ -10,7 +10,7 @@ const BlogPostTitle = (props) => {
 				<span className="ms-font-xxl">{props.title}</span>
 			</div>
 			<div className="blogPostUpdatedDate">
-				<img src={require("../images/lucashhCropped.jpg")}></img><span>Last Updated: {props.updatedDate}</span>
+				<img src={require("../images/lucashhCropped.jpg")}></img><span className="ms-font-m ms-fontWeight-semilight">Last Updated: {props.updatedDate}</span>
 			</div>
 
 		</div>
