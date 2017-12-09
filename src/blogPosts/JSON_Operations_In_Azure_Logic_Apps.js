@@ -13,8 +13,8 @@ class JSON_Operations_In_Azure_Logic_Apps extends Component {
         public string Content { get; set; }
     }
 `;
-		const codeString2 = `@{json(INPUT_TO_CONVERT).PROPERTY_NAME}`;
-		const codeString3 = `@{json(triggerBody()['MessageText']).PROPERTY_NAME}`;
+		const codeString2 = `json(INPUT_TO_CONVERT).PROPERTY_NAME`;
+		const codeString3 = `json(triggerBody()['MessageText']).PROPERTY_NAME`;
 		return (
 			<div className="ms-font-m ms-fontWeight-semilight blogPost">
 
@@ -49,7 +49,7 @@ class JSON_Operations_In_Azure_Logic_Apps extends Component {
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString2}</SyntaxHighlighter>
 				<p>In this case, the input is the Message Text returned from the trigger:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString3}</SyntaxHighlighter>
-				<p>To reiterate, the properties in the JSON object being sent to the queue are UserEmail, Subject, and Content, so the finalized Send_an_email properties using this syntax are:</p>
+				<p>To reiterate, the properties in the JSON object being sent to the queue are UserEmail, Subject, and Content, so the finalized Send_an_email properties using this syntax, with string interpolation are:</p>
 				<img src={require("../images/JsonExpression.jpg")}></img>
 				<p>Posting a message to the email queue will trigger the same email as the HTTP Request triggered Logic App!</p>
 
