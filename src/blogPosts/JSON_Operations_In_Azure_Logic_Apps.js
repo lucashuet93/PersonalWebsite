@@ -43,7 +43,7 @@ class JSON_Operations_In_Azure_Logic_Apps extends Component {
 				<BlogPostSubHeader subHeader="Logic App Code View – JSON Expression" />
 				<p>The Logic App interface is built on top of underlying code, which you can access through the <span className="ms-fontWeight-semibold">Code View</span> pane. The Logic App code is a JSON object itself, and in this case the JSON that relates to the Outlook email is found in <span className="ms-fontWeight-semibold">definition -> actions -> Send_an_email</span>, which should itself have a series of null properties.</p>
 				<img src={require("../images/NullCodeView.jpg")}></img>
-				<p>Not only do Logic Apps provide Dynamic Content, but they provide helpful methods you can run called Expressions. You can also write these expressions from the same window as Dynamic Content, and do not have to use Code View for this purpose. Using the json() expression, you can convert an input to a JSON type value. The syntax is as follows:</p>
+				<p>Not only do Logic Apps provide Dynamic Content, but they provide helpful methods you can run called Expressions. Using the json() expression, you can convert an input to a JSON type value. The syntax is as follows:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString2}</SyntaxHighlighter>
 				<p>In this case, the input is the Message Text returned from the trigger:</p>
 				<SyntaxHighlighter language='javascript' style={monokaiSublime}>{codeString3}</SyntaxHighlighter>

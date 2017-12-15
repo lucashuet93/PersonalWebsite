@@ -13,14 +13,16 @@ class Blog extends Component {
 		return (
 			<NavLink className="link-text" to={endpoint}>
 				<div className="ms-Grid-row blogListItem">
-					<div className="ms-Grid-col ms-u-sm5 ms-u-md5">
+					<div className="ms-Grid-col ms-u-sm7">
 						<span className="ms-font-l blogItemLink">{blog.title}</span>
 					</div>
-					<div className="ms-Grid-col ms-u-sm6 ms-u-md6">
+					<div className="ms-Grid-col ms-u-sm4">
 						{blog.tags.map((tag) => {
 							return (
 								<div className='tag'>
-									<span className="ms-font-m tagText ms-fontWeight-regular">{tag}</span>
+									<div className="tagContainer">
+										<span className="ms-font-m tagText ms-fontWeight-regular">{tag}</span>
+									</div>
 								</div>
 							)
 						})}
