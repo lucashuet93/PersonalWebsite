@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { BlogPost, Running_Local_Bots_In_Microsoft_Teams, React_With_Azure_Active_Directory_Integration, JSON_Operations_In_Azure_Logic_Apps } from '../blogPosts';
 import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
 import BlogPostTitle from '../components/BlogPostTitle';
+import { Helmet } from 'react-helmet';
 
 class Blog extends Component {
 	constructor(p) {
@@ -50,6 +51,10 @@ class Blog extends Component {
 	generateHomePage(blogs) {
 		return (
 			<div>
+				<Helmet>
+					<title>Lucas Huet-Hudson | Blog</title>
+					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+				</Helmet>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 					<div className="ms-Grid-col ms-u-sm10 ms-u-md8 blogList">
@@ -78,6 +83,10 @@ class Blog extends Component {
 			if (selectedBlog) {
 				return (
 					<div>
+						<Helmet>
+							<title>{selectedBlog.title}</title>
+							<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+						</Helmet>
 						<div className="ms-Grid-row">
 							<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 							<div className="ms-Grid-col ms-u-sm10 ms-u-md8">

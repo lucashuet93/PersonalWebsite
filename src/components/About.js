@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { List, Icon, FocusZone, FocusZoneDirection } from 'office-ui-fabric-react';
 import TechnologyFocuses from './TechnologyFocuses';
+import { Helmet } from 'react-helmet';
 
 class About extends Component {
 	howDidIGetHere() {
@@ -16,6 +17,10 @@ class About extends Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+					<title>Lucas Huet-Hudson | About</title>
+					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+				</Helmet>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm1 ms-u-md2" />
 					<div className="ms-Grid-col ms-u-sm10 ms-u-md8">
